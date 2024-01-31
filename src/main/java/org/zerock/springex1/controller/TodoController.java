@@ -100,10 +100,10 @@ public class TodoController {
 
         todoService.remove(tno);
 
-        redirectAttributes.addAttribute("page", 1);
-        redirectAttributes.addAttribute("size", pageRequestDTO.getSize());
+       // redirectAttributes.addAttribute("page", 1);
+        //redirectAttributes.addAttribute("size", pageRequestDTO.getSize());
 
-        return "redirect:/todo/list";
+        return "redirect:/todo/list?" + pageRequestDTO.getLink();
     }
 
 

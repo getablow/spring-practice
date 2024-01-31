@@ -53,10 +53,10 @@
                                     <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                                 </li>
                             </ul>
-                            <form class="d-flex" role="search">
+                            <%--<form class="d-flex" role="search">
                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                                 <button class="btn btn-outline-success" type="submit">Search</button>
-                            </form>
+                            </form>--%>
                         </div>
                     </div>
                 </nav>
@@ -150,7 +150,7 @@
                             </ul>
                         </div>
                             <script>
-                                document.querySelector(".pagination").addEventListener("click", function (e) {
+                                document.querySelector(".pagination").addEventListener("click", function(e){
                                     e.preventDefault()
                                     e.stopPropagation()
 
@@ -160,6 +160,14 @@
                                         return
                                     }
                                     const num = target.getAttribute("data-num")
+
+
+                                    /*const formObj = document.querySelector("form");
+                                    const hiddenInput = document.createElement("input");
+                                    hiddenInput.type = "hidden";
+                                    hiddenInput.name = "page";
+                                    hiddenInput.value = "\${num}";
+                                    formObj.appendChild(hiddenInput);*/
 
                                     const formObj = document.querySelector("form")
 
